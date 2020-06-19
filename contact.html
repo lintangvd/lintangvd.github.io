@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Indonesiaku</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+		<div class="header">
+				<h1>PESONA INDONESIA</h1>
+				<h3>Keanekaragaman , Kekayaan Alam Indonesia</h3>
+				<p>========Indahnya Indonesiaku========</p>
+	</div>
+			<!-- Slide Show -->
+	
+	<div class="container" id="slider-utama">
+			<div class="slider-wrapper">
+					<img src="slide/1.jpg" class="slide" />
+					<img src="slide/2.jpg" class="slide" />
+					<img src="slide/3.jpg" class="slide" />
+				</div>
+
+			<!-- Menu -->
+			<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="candil.html/">Candi</a></li>
+						<li><a href="pantai.html">Pantai</a></li>
+						<li><a href="pegunungan.html">Pegunungan</a></li>
+						<li><a href="contact.html">About Us</a></li>	
+					</ul>
+				  </div>
+				<!-- Sidebar -->
+<div id="sidebar">
+	
+		
+			
+						<h3 align="center">MOST POPULER</h3>
+						<ul>
+							<li><a href="candil.html">CANDI BOROBUDUR</a></li>
+							<li><a href="pantai.html">PANTAI BARON"</a></li>
+							
+						</ul>
+					</div>
+</div>
+
+<div id="isiposting">
+	<div class="isipostingprof">
+			<center>
+		<img src="fotoku.jpg" alt="" class="gambardepan">
+
+		<br>
+		<h2>안녕하세요</h2><br>
+		<p>
+				Nama saya Lintang Pangestika<br>
+				Asal saya dari Bekasi<br>
+				Saya sedang menempuh kuliah di Yogyakarta<br>
+				Sudah menjadi army sebaai pengagum dari BTS sekitar 2tahun <br> 
+		</p>
+		<p>Menurut saya BTS membawa pengaruh positif dalam hidup saya , bisa memberi semangat untuk menjalani sulitnya kehidupan, 
+		melihat perjuangan dan usaha dari mereka hingga jadi bintang besar di seluruh penjuru dunia , membuat saya ingin terus melangkah mengejar apa 
+		yang saya inginkan. 
+		Dari lagu-lagu mereka yang sangat bagus dan memiliki arti yang mendalam, membuat saya termotivasi.
+
+		</p>
+		<p>Saya membuat website ini untuk pada army yanga da di Indonesia ,
+			dengan ini bisa memudahkan para army baru untuk mengetahui seputar BTS.
+			Dan saya berterimakasih kepada Bangtan karena sudah ada dihidup saya , 
+			BORAHAE!!!!
+			Terimakasih Sudah Berkunjung :) 
+		</p>
+		</center>
+		<br>
+		</div>
+	</div>
+
+	<div id="footer">
+		&copy 2019, By Lintang Pangestika
+	</div>
+</div>
+<script type="text/javascript">
+		(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#slider-utama" );
+		
+	});
+	
+	
+})();
+ 
+	</script>
+</body>
+</html>

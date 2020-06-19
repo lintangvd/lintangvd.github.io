@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Indonesiaku</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	</style>
+</head>
+<body>
+	<div class="header">
+			<h1>HOUSE OF A.R.M.Y</h1>
+			<h3>Adorable Representative M.C for Youth</h3>
+			<p>========Fandom of 방탄소년단========</p>
+	</div>
+			<!-- Slide Show -->
+	
+			<div class="container" id="slider-utama">
+					<div class="slider-wrapper">
+							<img src="slide/1.jpg" class="slide" />
+							<img src="slide/2.jpg" class="slide" />
+							<img src="slide/3.jpg" class="slide" />
+						</div>
+
+			<!-- Menu -->
+			<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="candil.html/">Candi</a></li>
+						<li><a href="pantai.html">Pantai</a></li>
+						<li><a href="pegunungan.html">Pegunungan</a></li>
+						<li><a href="contact.html">About Us</a></li>	
+					</ul>
+				  </div>
+
+					<!-- Sidebar -->
+<div id="sidebar">
+		
+		<div class="widged">
+				<h3 align="center">MOST POPULER</h3>
+				<ul>
+					<li><a href="candil.html">CANDI BOROBUDUR</a></li>
+					<li><a href="pantai.html">PANTAI BARON"</a></li>
+					
+				</ul>
+			</div>
+		
+</div>
+				<!-- isi Postingan -->
+<div id="isipostingmerch">
+		<div class="isipostingmerch">
+				<img src="pegunungan/1.jpg" alt="" class="gambardepan">
+				<h1 id="parangtritis">KALI ADEM</h1>
+				<br>		
+				<p>
+						Kaliadem adalah suatu kawasan hutan pinus seluas 25 hektare dengan ketinggian 1.100 meter di atas permukaan laut, di lereng selatan Gunung Merapi. Kaliadem berada dalam wilayah administratif Desa Kepuharjo, Cangkringan, Sleman, Yogyakarta, Indonesia, ±25-30 km utara Kota Yogyakarta.
+						Kawasan ini memiliki udara sejuk dan memiliki banyak keindahan dan keunikan alam. Keberadaan Gunung Merapi dengan fenomena vulkaniknya, morfologi gunung dan lembahnya, hutan alam dengan keanekaragaman flora dan fauna serta kondisi sosial budaya yang unik merupakan potensi yang sangat besar untuk kegiatan wisata alam (ekowisata).
+						Kaliadem dapat dicapai dari Yogyakarta (melalui Kaliurang), dari Solo (melalui Prambanan dan Cangkringan) atau dari Borobudur/Magelang (melalui Tempel dan Turi).
+						<a href="pegunungan.html">Selengkapnya >>></a> </p>
+				<br>
+				</div>
+	</div>
+	<div id="isipostingmerch">
+			<div class="isipostingmerch">
+					<img src="pegunungan/2.jpg" alt="" class="gambardepan">
+					<h1 id="parangtritis">Gunung Apipurba Nglanggeran</h1>
+					<br>		
+					<p>
+							Gunung Nglanggeran adalah sebuah gunung di Daerah Istimewa Yogyakarta, Indonesia. Gunung ini merupakan suatu gunung api purba yang terbentuk sekitar 0,6-70 juta tahun yang lalu atau yang memiliki umur tersier (Oligo-Miosen).[1][2] Gunung Nglanggeran memiliki batuan yang sangat khas karena didominasi oleh aglomerat dan breksi gunung api.[3][4][5] Gunung ini terletak di Desa Nglanggeran, Kecamatan Patuk, Kabupaten Gunung Kidul yang berada pada deretan Pegunungan Baturagung.</p>
+					<br>
+					</div>
+		</div>
+		<div id="isipostingmerch">
+				<div class="isipostingmerch">
+						<img src="pegunungan/3.jpg" alt="" class="gambardepan">
+						<h1 id="parangtritis">BUKIT BINTANG</h1>
+						<br>		
+						<p>
+								Tempat ini berbeda dengan Bukit Bintang yang ada di Malaysia, jika Anda berpikiran kedua tempat ini sama, berarti kita punya pemikiran yang sama.
+
+Bukit Bintang yang di Malaysia itu merupakan sebuah kawasan yang cukup strategis yang deket dengan bandara Kuala Lumpur Malaysia.
+
+Dimana tempat ini merupakan kawasan wisata belanja berbagai macam produk, mulai dari produk elektronik, barang branded, hingga kuliner yang lezat ada di sana. Bisa dibilang one stop shopping centre.
+
+Sedangkan, Bukit Bintang Jogja itu bukan kawasan market, bukan pula sebuah kota yang banyak bangunan tingginya. </p>
+						<br>
+						</div>
+			</div>
+	
+	<div id="footer">
+		&copy 2019, By LintangPangestika
+	</div>
+</div>
+<script type="text/javascript">
+		(function() {
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();		
+			}, false);
+		}	
+	};
+	document.addEventListener( "DOMContentLoaded", function() {
+		var slider = new Slideshow( "#slider-utama" );
+	});
+})();
+	</script>
+</body>
+</html>

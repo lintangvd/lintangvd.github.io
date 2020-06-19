@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Indonesiaku</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	</style>
+</head>
+<body>
+		<div class="header">
+				<h1>PESONA INDONESIA</h1>
+				<h3>Keanekaragaman , Kekayaan Alam Indonesia</h3>
+				<p>========Indahnya Indonesiaku========</p>
+	</div>
+
+			<!-- Slide Show -->
+	
+	<div class="container" id="slider-utama">
+			<div class="slider-wrapper">
+					<img src="slide/1.jpg" class="slide" />
+					<img src="slide/2.jpg" class="slide" />
+					<img src="slide/3.jpg" class="slide" />
+				</div>
+
+			<!-- Menu -->
+			<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="candil.html/">Candi</a></li>
+						<li><a href="pantai.html">Pantai</a></li>
+						<li><a href="pegunungan.html">Pegunungan</a></li>
+						<li><a href="contact.html">About Us</a></li>	
+					</ul>
+				  </div>
+
+					<!-- Sidebar -->
+<div id="sidebar">
+		
+		<div class="widged">
+				<h3 align="center">MOST POPULER</h3>
+				<ul>
+					<li><a href="candil.html">CANDI BOROBUDUR</a></li>
+					<li><a href="pantai.html">PANTAI BARON"</a></li>
+					
+				</ul>
+			</div>
+			
+			
+</div>
+				<!-- isi Postingan -->
+<div id="isiposting">
+		<div class="isiposting">
+				<img src="pantai/1.jpg" alt="" class="gambardepan">
+				<h1 id="bunker">PANTAI BARON</h1>
+				<p>Pantai Baron adalah salah satu objek wisata berupa pantai yang terletak di Desa Kemadang, Kecamatan Tanjungsari, 
+					Kabupaten Gunungkidul.[1] Lokasi Pantai Baron dapat ditempuh 40 km daeri pusat kota Yogyakarta.
+					 Asal mula nama Pantai Baron berasal dari nama seorang bangsawan asal Belanda yang bernama Baron Skeber.
+					 Bangsawan tersebut pernah mendaratkan kapalnya di pantai selatan tepatnya di pantai yang saat ini terkenal dengan 
+					 sebutan Pantai Baron.Jalan menuju objek wisata Pantai Baron cukup baik untuk dilalui kendaraan pribadi, sepeda motor dan bus.[</p>
+	
+					 <p>Objek wisata Pantai Baron merupakan pantai yang membentuk cekungan.Seperti pantai lainnya, di Pantai Baron tersedia 
+						 aneka ikan laut beserta olahannya.Ikan yang biasanya dijual di Pantai Baron adalah udang windu, kakap, bawal putih 
+						 dan tongkol. Pantai Baron memiliki fasilitas berupa tempat pelelangan ikan, wahana permainan anak-anak, perahu 
+						 bermesin, dan toko cenderamata. Buah sirkaya, pisang tanduk, sirsak, dan berbagai macam cenderamata yang terbuat 
+						 dari kerang laut. Cenderamata berbahan kerang yang banyak dijual di Pantai Baron adalah bros, tirai kerang, 
+						 lampu hias, cermin berhias karang, figura, 
+						 dan aneka karakter hewan yang juga terbuat dari kerang laut.</p>
+					<a href="pantai.html">Selengkapnya >>></a> </p>
+			<br>
+		</div>
+	</div>
+	<div id="isiposting">
+		<div class="isiposting">
+			<img src="pantai/2.jpg" alt="" class="gambardepan">
+			<h1 id="bunker">PANTAI INDRAYANTI</h1>
+			<br>
+			<p>Pantai Pulang Sawal (Pantai Indrayanti) atau disingkat dengan Pantai Pulsa adalah salah satu pantai yang menarik dan eksotis berada di Dusun Ngasem, Desa Sidoharjo, Kecamatan Tepus, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta.[1] Lokasi Pantai Indrayanti, Kabupaten Gunungkidul terletak tepat di sisi timur Pantai Sundak. Keduanya dibatasi oleh perbukitan karang. Pantai Indarayati menawarkan keindahan panorama yang unik dibanding pantai-pantai lain di Gunungkidul.<br>		
+		</div>
+	</div>
+	<div id="isiposting" >
+		<div class="isiposting" id="kraton">
+			<img src="pantai/3.jpg" alt="" class="gambardepan">
+			<h1 id="bunker">PANTAI PARANGTRITIS</h1>
+			<br>
+			<p>Parangtritis
+					Parangtritis merupakan objek wisata yang cukup terkenal di Yogyakarta selain objek pantai lainnya seperti Samas, Baron, Kukup, Krakal dan Glagah. Parangtritis mempunyai keunikan pemandangan yang tidak terdapat pada objek wisata lainnya yaitu selain ombak yang besar juga adanya gunung-gunung pasir di sekitar pantai, yang biasa disebut gumuk. Objek wisata ini sudah dikelola oleh pihak Pemkab Bantul dengan cukup baik, mulai dari fasilitas penginapan maupun pasar yang menjajakan souvenir khas Parangtritis.
+					Di Parangtritis ada juga ATV, kereta kuda dan kuda yang dapat disewa untuk menyusuri pantai dari timur ke barat. Selain itu Parangtritis juga merupakan tempat untuk olahraga udara/aeromodeling.</a>
+					<br>		 
+		</div>
+	</div>
+	
+	<div id="footer">
+		&copy 2019, By LintangPangestika
+	</div>
+</div>
+<script type="text/javascript">
+		(function() {
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();		
+			}, false);
+		}	
+	};
+	document.addEventListener( "DOMContentLoaded", function() {
+		var slider = new Slideshow( "#slider-utama" );
+	});
+})();
+	</script>
+</body>
+</html>
